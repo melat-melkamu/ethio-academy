@@ -12,3 +12,12 @@ This is a web-based enrollment system developed as part of my Computer Science s
 * **Frontend:** HTML5, CSS
 * **Database:** SQLite
 * **Security:** Python-dotenv for Secret Key protection
+* ## System Preview
+
+### Registration Page
+*This is where new students create their Ethio Academy accounts.*
+![Registration Page](registration.png)
+
+### Student Dashboard (Home)
+*After logging in, students can view their enrollment status here.*
+![Home Page](home.png)
