@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <div class="card shadow-lg p-5 mx-auto" style="max-width: 500px; border-radius: 15px;">
+       <h2 class="mb-4" style="color: purple;">
+    Ready to Leave, 
+    {% if student %}
+        {{ student.first_name }}?
+    {% elif teacher %}
+        {{ teacher.full_name }}?
+    {% else %}
+        {{ user.username }}?
+    {% endif %}
+</h2>
+
+
+
+
+        <p class="text-muted">Are you sure you want to log out of Ethio Academy?</p>
+        
+        <div class="d-grid gap-2 d-md-block mt-4">
+            <a href="{% url 'logout_execute' %}" class="btn btn-danger px-4">Yes, Logout</a>
+            
+            <a href="javascript:history.back()" class="btn btn-outline-secondary px-4">Cancel</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

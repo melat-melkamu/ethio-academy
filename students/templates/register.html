@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-4">
+
+        <div class="card shadow p-4" style=" margin-top:60px;">
+
+            <h3 class="text-center mb-3" style="color: rgb(171, 102, 171);">
+                Student Registration
+            </h3>
+
+            <form method="POST" >
+                {% csrf_token %}
+
+                
+                <div class="mb-3">
+                    {{ form.first_name }}
+                    {{ form.first_name.errors }}
+                </div>
+                
+                <div class="mb-3">
+                    {{ form.last_name }}
+                    {{ form.last_name.errors }}
+                </div>
+
+                
+                <div class="mb-3">
+                    {{ form.age }}
+                    {{ form.age.errors }}
+                </div>
+
+                
+                <div class="mb-3">
+                    {{ form.grade }}
+                    {{ form.grade.errors }}
+                </div>
+
+                
+                <div class="mb-3">
+                    {{ form.email }}
+                    {{ form.email.errors }}
+                </div>
+
+                <button class="btn btn-success w-100" type="submit" style="background: rgb(171, 102, 171); color: white;">
+                    Register
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

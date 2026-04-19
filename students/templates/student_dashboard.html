@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5"style="max-width: 600px;">
+
+    <div class="card shadow p-4">
+
+        <h2 class="text-center" style="color: purple;">
+            Student Dashboard
+        </h2>
+
+        <hr>
+
+        <p><b>ID:</b> {{ student.id }}</p>
+        <p><b>First Name:</b> {{ student.first_name }}</p>
+        <p><b>Last Name:</b> {{ student.last_name }}</p>
+        <p><b>Age:</b> {{ student.age }}</p>
+        <p><b>Email:</b> {{ student.email }}</p>
+        <p><b>Gender:</b> {{ student.gender }}</p>
+        <p><b>Grade:</b> {{ student.grade }}</p>
+        <p><b>Rank:</b> {{ student.rank }}</p>
+
+        <hr>
+<div class="d-flex gap-2">
+    <a href="{% url 'logout_confirm' %}" class="btn btn-danger flex-fill">
+        Logout
+    </a>
+
+    <a href="{% url 'password_change' %}" 
+       class="btn btn-warning flex-fill"
+       onclick="return confirm('Hello {{ student.first_name }}, are you sure you want to reset your password?')">
+        Reset Password
+    </a>
+</div>
+</div>
+
+{% endblock %}
