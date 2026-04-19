@@ -18,6 +18,6 @@ This is a web-based enrollment system developed as part of my Computer Science s
 *This is where new students create their Ethio Academy accounts.*
 ![Registration Page](registration.png)
 
-### Student Dashboard (Home)
+### Home page 
 *After logging in, students can view their enrollment status here.*
 ![Home Page](home.png)
